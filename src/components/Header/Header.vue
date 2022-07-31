@@ -11,7 +11,7 @@
             <router-link class="header__navigation_item" to="/feedback">
                 Feedback
             </router-link>
-            <router-link class="header__navigation_item" to="/login">
+            <router-link class="header__navigation_item" to="login">
                 Login
             </router-link>
         </nav>
