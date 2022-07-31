@@ -1,22 +1,30 @@
 .header__container {
     display: flex;
     margin-bottom: 70px;
+    border-bottom: 1px solid $baseGray;
 }
 
 .logo__container {
     display: flex;
-
+    align-items: center;
+    
     .logo {
-        padding: 0 20px 0 10px;
+        margin-right: 20px;
+        margin-left: 10px;
+        background-color: $baseGreen;
     }
 
-    // .brand {
-
-    // }
+    .brand {
+        display: inline;
+        padding-bottom: 10px;
+        font-size:45px;
+        font-weight: 400;
+        
+    }
 }
 
 .header__navigation {
-    width: 100%; //
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 0 60px 0 60px;

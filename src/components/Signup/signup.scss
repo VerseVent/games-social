@@ -1,0 +1,21 @@
+.submitBtn {
+    background-color: $baseGreen;
+    color:$baseBlack;
+    font-size:25px;
+    font-weight: bold;
+    border-radius: 11px;
+    padding: 15px 45px;
+    display: inline-block;
+    text-align: center;
+}
+
+.gamesDropdown {
+    .gamesDropdownList {
+        list-style: none;
+        text-align: left;
+    }
+}
+
+.info {
+    margin-bottom: 40px;
+}

@@ -1,7 +1,7 @@
 <template>
     <div class="header__container">
         <div class="logo__container">
-            <h1 class="logo">LOGO</h1>
+            <img class="logo" src="../../assets/logo.svg" alt='project star logo'/>
             <h1 class="brand">zero</h1>
         </div>
         <nav class="header__navigation">
