@@ -33,7 +33,7 @@ export default {
             }
             const ax = new AxiosAPI();
             await ax.sendLoginForm(loginData);
-            this.$router.push('/user');
+            this.$router.push('/user').catch(()=>{});
         }
     }
 }

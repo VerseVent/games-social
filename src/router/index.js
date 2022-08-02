@@ -32,8 +32,7 @@ const routes = [
     component: UserView,
     async beforeEnter(to, from, next) {
       const ax = new AxiosAPI();
-      const jwt = localStorage.getItem("jwt");
-      const status = await ax.authUser(jwt);
+      const status = await ax.authUser();
       if (status === 200) {
         next();
       } else {

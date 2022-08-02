@@ -1,7 +1,7 @@
 import signup from "./user/signup";
 import login from "./user/login";
 import Notiflix from "notiflix";
-import axios from "axios";
+import axiosInstance from "./AxiosTokenInstance";
 
 export default class AxiosAPI {
   async sendSignupForm(data) {
@@ -23,16 +23,10 @@ export default class AxiosAPI {
       return Notiflix.Notify.warning(e.response.data.message);
     }
   }
-  async authUser(jwt) {
+  async authUser() {
     try {
-      const config = {
-        headers: {
-          Authorization: `Bearer ${jwt}`,
-        },
-      };
-      const isApproved = await axios.get(
-        "http://localhost:3000/user/auth",
-        config
+      const isApproved = await axiosInstance.get(
+        "http://localhost:3000/user/auth"
       );
       console.log(isApproved);
       return isApproved.status;
