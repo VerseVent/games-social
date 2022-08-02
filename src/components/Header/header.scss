@@ -1,9 +1,11 @@
 .header__container {
+    position: relative;
     display: flex;
-    margin-bottom: 70px;
     border-bottom: 1px solid $baseGray;
 }
-
+.logo__link{
+    text-decoration: none;
+}
 .logo__container {
     display: flex;
     align-items: center;

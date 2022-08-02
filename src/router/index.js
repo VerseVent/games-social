@@ -3,7 +3,10 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import LoginView from "../views/LoginView.vue";
 import SignupView from "../views/SignupView.vue";
-import UserActionsView from "../views/UserActionsView.vue";
+import UserView from "../views/UserView/UserView.vue";
+import Games from "../components/Games/Games.vue";
+import Friends from "../components/Friends/Friends.vue";
+import AxiosAPI from "../service/AxiosAPI";
 
 Vue.use(VueRouter);
 
@@ -24,9 +27,31 @@ const routes = [
     component: SignupView,
   },
   {
-    path: "/actions",
-    name: "useractions",
-    component: UserActionsView,
+    path: "/user",
+    name: "user",
+    component: UserView,
+    async beforeEnter(to, from, next) {
+      const ax = new AxiosAPI();
+      const jwt = localStorage.getItem("jwt");
+      const status = await ax.authUser(jwt);
+      if (status === 200) {
+        next();
+      } else {
+        next("/login");
+      }
+    },
+    children: [
+      {
+        path: "games",
+        name: "games",
+        component: Games,
+      },
+      {
+        path: "friends",
+        name: "friends",
+        component: Friends,
+      },
+    ],
   },
 ];
 

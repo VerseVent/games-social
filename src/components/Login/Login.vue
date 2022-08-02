@@ -2,7 +2,7 @@
     <div class="container">
         <div class="contentContainer">
             <h2 class="title">Login</h2>
-            <form class="loginForm" @submit.prevent="handleLoginSubmit">
+            <form class="loginForm" @submit.prevent="handleLogin">
                 <input class="loginFormField" type="text" placeholder="Email" />
                 <input class="loginFormField" type="password" placeholder="Password" />
                 <div class="checkboxContainer">
@@ -21,8 +21,21 @@
 </template>
 
 <script>
+import AxiosAPI from '../../service/AxiosAPI'
 export default {
 
+    methods: {
+        async handleLogin(e) {
+            const formElements = e.target.elements;
+            const loginData = {
+                email: formElements[0].value,
+                password: formElements[1].value,
+            }
+            const ax = new AxiosAPI();
+            await ax.sendLoginForm(loginData);
+            this.$router.push('/user');
+        }
+    }
 }
 </script>
 
