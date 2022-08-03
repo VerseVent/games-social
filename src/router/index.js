@@ -3,8 +3,10 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import LoginView from "../views/LoginView.vue";
 import SignupView from "../views/SignupView.vue";
+import MissingView from "../views/MissingView/MissingView.vue";
 import UserView from "../views/UserView/UserView.vue";
 import Games from "../components/Games/Games.vue";
+import GameRooms from "../components/GameRooms/GameRooms.vue";
 import Friends from "../components/Friends/Friends.vue";
 import AxiosAPI from "../service/AxiosAPI";
 
@@ -50,7 +52,17 @@ const routes = [
         name: "friends",
         component: Friends,
       },
+      {
+        path: "gameRooms/:gameId",
+        name: "gameRooms",
+        component: GameRooms,
+      },
     ],
+  },
+  {
+    path: "*",
+    name: "Missing",
+    component: MissingView,
   },
 ];
 

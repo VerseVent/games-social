@@ -28,10 +28,29 @@ export default class AxiosAPI {
       const isApproved = await axiosInstance.get(
         "http://localhost:3000/user/auth"
       );
-      console.log(isApproved);
       return isApproved.status;
     } catch (e) {
-      // return Notiflix.Notify.failure(e.response.data.message);
+      console.log(e);
+    }
+  }
+  async getGamesInfo() {
+    try {
+      const res = await axiosInstance.get(
+        "http://localhost:3000/game/getGamesInfo"
+      );
+      return res.data;
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  async getGameById(gameId) {
+    try {
+      const res = await axiosInstance.get(
+        `http://localhost:3000/game/getGameById/:${gameId}`
+      );
+      return res.data;
+    } catch (e) {
+      console.log(e);
     }
   }
 }

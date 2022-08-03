@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import AxiosAPI from '../../service/AxiosAPI'
+import AxiosAPI from '@/service/AxiosAPI'
 export default {
 
     methods: {

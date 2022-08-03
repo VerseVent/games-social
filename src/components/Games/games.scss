@@ -1,5 +1,5 @@
 .games__container {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     margin-top: 60px;
     padding: 0 25px 0 25px;
@@ -9,7 +9,31 @@
     -moz-box-shadow: -20px -24px 0px 0px rgba(36, 255, 0, 1);
     box-shadow: -20px -24px 0px 0px rgba(36, 255, 0, 1);
 }
+.games__games_container{
+    display: flex;
+    overflow-y: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+    .game__container{
+        margin-right: 15px;
+        margin-bottom: 35px;
+        &:last-of-type{
+            margin-right: 0;
+        }
+        .game__title{
+            font-weight: 400;
+            margin-bottom: 3px;
+            text-transform: capitalize;
+        }
+        .game__players{
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+}
 
 .games__content_container {}
 
-.games__title {}
+.games__title {
+ padding-top: 15px;
+}

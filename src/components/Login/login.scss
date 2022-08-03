@@ -7,6 +7,12 @@
     border: 1px solid $baseWhite;
     border-radius: 20px;
     transition: box-shadow cubic-bezier(0.165, 0.84, 0.44, 1) 1000ms;
+    &:focus-within{
+                -webkit-box-shadow: -20px -24px 0px 0px rgba(36, 255, 0, 1);
+                -moz-box-shadow: -20px -24px 0px 0px rgba(36, 255, 0, 1);
+                box-shadow: -20px -24px 0px 0px rgba(36, 255, 0, 1);
+         
+    }
 }
 
 .contentContainer {
@@ -30,7 +36,8 @@
     all: unset;
     background-color: $baseGrayTransparent;
     margin-bottom: 20px;
-    font-size: 1.5vw;
+    width: 70%;
+    font-size: 1vw;
     padding: 10px;
     text-align: left;
     border-radius: 10px;
@@ -39,11 +46,7 @@
         color: $baseWhite;
     }
 }
-.container:focus-with{
-    -webkit-box-shadow: -20px -24px 0px 0px rgba(36, 255, 0, 1);
-    -moz-box-shadow: -20px -24px 0px 0px rgba(36, 255, 0, 1);
-    box-shadow: -20px -24px 0px 0px rgba(36, 255, 0, 1);
-}
+
 
 .loginFormFieldCheckbox {
     width: 20px;
