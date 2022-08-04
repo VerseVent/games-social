@@ -21,9 +21,7 @@
 </template>
 
 <script>
-import AxiosAPI from '@/service/AxiosAPI'
 export default {
-
     methods: {
         async handleLogin(e) {
             const formElements = e.target.elements;
@@ -31,8 +29,9 @@ export default {
                 email: formElements[0].value,
                 password: formElements[1].value,
             }
-            const ax = new AxiosAPI();
-            await ax.sendLoginForm(loginData);
+
+            await this.$store.dispatch('loginUser', loginData)
+
             this.$router.push('/user').catch(()=>{});
         }
     }

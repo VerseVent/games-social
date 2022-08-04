@@ -20,14 +20,15 @@
 import AxiosAPI from '@/service/AxiosAPI';
 
 export default {
+
     data() {
         return {
             games:[],
         }
     },
     async mounted() {
-        const ax = new AxiosAPI();
-        this.games = await ax.getGamesInfo();
+            const ax = new AxiosAPI();
+            this.games = await ax.getGamesInfo();
 
     }
 }

@@ -1,0 +1,41 @@
+ .game__title {
+     font-weight: 400;
+    padding-top:10px;
+    text-transform: capitalize;
+ }
+ .game__createForm{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15px;
+    flex-basis: 60%;
+    .game__input {
+            all: unset;
+            background-color: $baseGrayTransparent;
+            margin-bottom: 20px;
+            flex-basis: 60%;
+            font-size: 1.1vw;
+            padding: 10px;
+            text-align: left;
+            border-radius: 10px;
+    
+            &::placeholder {
+                color: $baseWhite;
+                font-size: 1.1vw;
+            }
+        }
+ }
+
+ .container{
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 0 25px 0 25px;
+        text-align: center;
+        border: 1px solid $baseWhite;
+        border-radius: 20px;
+        box-shadow: none;
+ }
+.game__container{
+    display: flex;
+    justify-content: space-between;
+}

@@ -33,11 +33,13 @@ const routes = [
     name: "user",
     component: UserView,
     async beforeEnter(to, from, next) {
-      const ax = new AxiosAPI();
-      const status = await ax.authUser();
-      if (status === 200) {
+      try {
+        const ax = new AxiosAPI();
+        const status = await ax.authUser();
+        console.log("BeforeEnter");
         next();
-      } else {
+      } catch (e) {
+        console.log("BeforeEnter error: ", e);
         next("/login");
       }
     },
