@@ -30,10 +30,8 @@ export default class AxiosAPI {
   }
   async authUser() {
     try {
-      const isApproved = await axiosInstance.get(
-        "http://localhost:3000/user/auth"
-      );
-      return isApproved.status;
+      const user = await axiosInstance.get("http://localhost:3000/user/auth");
+      return user;
     } catch (authError) {
       Notiflix.Notify.failure("Wrong token");
       throw authError;
@@ -62,3 +60,5 @@ export default class AxiosAPI {
     }
   }
 }
+
+export const axiosAPI = new AxiosAPI();

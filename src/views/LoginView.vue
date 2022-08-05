@@ -1,9 +1,10 @@
 <template>
-<div>
-    <Header></Header>
-    <Login></Login>
+    <div>
+        <Header>
+        </Header>
+        <Login></Login>
 
-</div>
+    </div>
 </template>
 
 <script>

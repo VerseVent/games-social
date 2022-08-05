@@ -31,17 +31,21 @@
     align-items: center;
     padding: 0 60px 0 60px;
     position: relative;
-
     .header__navigation_item {
         text-decoration: none;
         color: $baseWhite;
         font-size: 22px;
-        margin-right: 20px;
-
-        &:nth-last-of-type(1) {
-            position: absolute;
-            right: 0;
-            margin-right: 60px;
-        }
+        margin-right: 40px;
+        
+    }
+    .header__navigation_item--login{
+        position: absolute;
+        right: 0;
+        margin-right: 60px;
+    }
+    .header__user_nav{
+        position: absolute;
+        right: 0;
+        margin-right: 30px;
     }
 }

@@ -1,6 +1,7 @@
 <template>
     <div>
-        <Header></Header>
+        <Header>
+        </Header>
         <Signup></Signup>
     </div>
 </template>

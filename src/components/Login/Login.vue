@@ -30,9 +30,16 @@ export default {
                 password: formElements[1].value,
             }
 
-            await this.$store.dispatch('loginUser', loginData)
+            try {
+                await this.$store.dispatch('loginUser', loginData)
+    
+                this.$router.push('/user').catch(()=>{});
+            } catch (error) {
+                console.log("wfdwefwe");             
+            }
 
-            this.$router.push('/user').catch(()=>{});
+
+
         }
     }
 }

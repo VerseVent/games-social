@@ -1,6 +1,7 @@
 <template>
     <div>
-        <Header></Header>
+        <Header>
+        </Header>
         <div class="userActions__container">
             <router-link class="userActions_link" :to="{name: 'games'}">Games</router-link>
             <router-link class="userActions_link" to="/user/friends">Friends</router-link>
