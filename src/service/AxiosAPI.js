@@ -2,6 +2,15 @@ import Notiflix from "notiflix";
 import axiosInstance from "./AxiosTokenInstance";
 
 export default class AxiosAPI {
+  async createGameRoom(data) {
+    try {
+      const roomObj = await axiosInstance.post(
+        "http://localhost:3000/game/createRoom",
+        data
+      );
+      return roomObj;
+    } catch (e) {}
+  }
   async sendSignupForm(data) {
     try {
       const res = await axiosInstance.post(

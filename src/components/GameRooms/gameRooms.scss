@@ -39,3 +39,66 @@
     display: flex;
     justify-content: space-between;
 }
+.create_room__modal_container{
+    display: flex;
+    justify-content: center;
+}
+.create_room_form{
+    display: flex;
+    width: 55%;
+    min-width: 200px;
+    max-width: 500px;
+    background-color: $baseBlack;
+    flex-direction: column;
+    .create_room_form__title{
+        margin-bottom: 40px;
+    }
+    .create_room_btn{
+        background-color: $baseGreen;
+            color: $baseBlack;
+            width: 60%;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 11px;
+            padding: 10px 15px;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+    }
+    .create_room_form__field{
+        all: unset;
+        background-color: $baseGrayTransparent;
+        margin-bottom: 20px;
+        font-size: 16px;
+        padding: 10px;
+        text-align: left;
+        border-radius: 10px;
+        flex-basis: 30px;
+        background-color: $baseGrayTransparent;
+    &::placeholder{
+        color: white;
+    }
+    &:disabled{
+        background-color: rgba($color: #3a3939, $alpha: 1);
+        &::placeholder {
+                color: $baseGrayTransparent;
+            }
+    }
+    }
+    .private_room__container{
+        display: flex;
+        width: 55%;
+        align-items: center;
+        margin: 10px;
+        .create_room_form__checkbox{
+            width: 20px;
+            height: 20px;
+            
+        }
+        & label{
+            display: block;
+            margin-right: 10px;
+        }
+    }
+}

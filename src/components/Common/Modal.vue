@@ -1,13 +1,18 @@
 <template>
-    <div name="modal">
+    <div class="modal__main_container" name="modal">
         <button @click="showModal = true" class="modal__button">Create room</button>
-        <div v-if="showModal">
-            <div class="modal-mask">
-                <div class="modal-container">
-                    <button class="modal-default-button" @click="showModal = false">X</button>
-                    <slot></slot>
+        <div>
+            <transition name="modal-slide">
+                <div v-if="showModal" @click.self="showModal = false" class="modal-mask">
+                    <div class="modal-container">
+                        <div class="modal__close_btn_container">
+                            <button class="modal-default-button" @click="showModal = false">X</button>
+
+                        </div>
+                        <slot></slot>
+                    </div>
                 </div>
-            </div>
+            </transition>
         </div>
     </div>
 </template>
@@ -18,7 +23,7 @@ export default {
         return {
             showModal: false,
         }
-    }
+    },
 }
 </script>
 

@@ -42,6 +42,7 @@ const routes = [
           next();
         }
       } else {
+        next();
       }
     },
     meta: { auth: false },

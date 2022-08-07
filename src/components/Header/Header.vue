@@ -18,7 +18,7 @@
             <router-link v-if="!auth" class="header__navigation_item header__navigation_item--login" to="/login">
                 Login
             </router-link>
-            <div class="header__user_nav" v-else>
+            <div class="header__user_nav" v-else-if="auth">
                 <router-link class="header__navigation_item" to="/user/profile">
                     Profile
                 </router-link>
