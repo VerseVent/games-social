@@ -103,9 +103,13 @@ router.beforeEach(async (to, from, next) => {
       next("/login");
     }
   } else {
-    next();
+    try {
+      await store.dispatch("authUser");
+      next();
+    } catch (e) {
+      next();
+    }
   }
-  //  else if (to.meth.auth && )
 });
 
 export default router;

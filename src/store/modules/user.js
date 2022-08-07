@@ -6,7 +6,9 @@ export default {
   },
   getters: {
     GET_USER_ID(state) {
-      return state.userData._id;
+      if (state.userData) {
+        return state.userData._id;
+      }
     },
   },
   mutations: {
