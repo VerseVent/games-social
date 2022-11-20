@@ -1,0 +1,76 @@
+.container {
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 0 25px 0 25px;
+    text-align: center;
+    border: 1px solid $baseWhite;
+    border-radius: 20px;
+    transition: box-shadow cubic-bezier(0.165, 0.84, 0.44, 1) 1000ms;
+    &:focus-within{
+                -webkit-box-shadow: -20px -24px 0px 0px rgba(36, 255, 0, 1);
+                -moz-box-shadow: -20px -24px 0px 0px rgba(36, 255, 0, 1);
+                box-shadow: -20px -24px 0px 0px rgba(36, 255, 0, 1);
+         
+    }
+}
+
+.contentContainer {
+    text-align: center
+}
+
+.title {
+    margin-top: 50px;
+    margin-bottom: 75px;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.loginFormField {
+    all: unset;
+    background-color: $baseGrayTransparent;
+    margin-bottom: 20px;
+    width: 70%;
+    font-size: 1vw;
+    padding: 10px;
+    text-align: left;
+    border-radius: 10px;
+
+    &::placeholder {
+        color: $baseWhite;
+    }
+}
+
+
+.loginFormFieldCheckbox {
+    width: 20px;
+    height: 20px;
+}
+
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.submitBtn {
+    background-color: $baseGreen;
+    margin-bottom: 40px;
+    color: $baseBlack;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 11px;
+    padding: 15px 45px;
+    display: inline-block;
+    text-align: center;
+}
+
+.info {
+    margin-bottom: 40px;
+}
