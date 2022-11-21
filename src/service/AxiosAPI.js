@@ -77,6 +77,17 @@ export default class AxiosAPI {
       console.log(e);
     }
   }
+  async deleteRoomCreatorAndRoom(payload) {
+    try {
+      console.log("Axios", payload);
+      const res = await axiosInstance.delete(
+        `http://localhost:3000/game/deleteRoomCreatorAndRoom/${payload.userId}/${payload.gameId}/${payload.roomId}`
+      );
+      return res.data;
+    } catch (e) {
+      console.log(e);
+    }
+  }
 }
 
 export const axiosAPI = new AxiosAPI();

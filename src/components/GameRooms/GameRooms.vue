@@ -80,8 +80,8 @@ export default {
     ...mapActions(["getUserById"]),
     async handleRoomCreate() {
       console.log(this.room);
-      const response = await axiosAPI.createGameRoom(this.room);
-      console.log(response);
+      const { data } = await axiosAPI.createGameRoom(this.room);
+      this.$router.push(`/user/gameRooms/${data.gameId}/${data.id}`);
     },
   },
   async mounted() {

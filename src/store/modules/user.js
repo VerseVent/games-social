@@ -56,5 +56,15 @@ export default {
         throw e;
       }
     },
+    async deleteRoomAndUser({ commit }, payload) {
+      try {
+        const user = await axiosAPI.deleteRoomCreatorAndRoom(payload);
+        commit("SET_USER_DATA", user.data);
+      } catch (e) {
+        localStorage.removeItem("jwt");
+        commit("DELETE_USER_DATA");
+        throw e;
+      }
+    },
   },
 };

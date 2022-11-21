@@ -105,6 +105,7 @@ router.beforeEach(async (to, from, next) => {
   if (to.meta.auth) {
     try {
       await store.dispatch("authUser");
+      await store.dispatch("getUserById", store.getters.GET_USER_ID);
       next();
     } catch (e) {
       next("/login");
